@@ -18,12 +18,8 @@ const config = new OpenApi.Config({
 
 // Create server instance
 const server = new McpServer({
-    name: "fetch-hot-news",
-    version: "0.0.1",
-    capabilities: {
-        resources: {},
-        tools: {},
-    },
+    name: "fetch_hot_news",
+    version: "0.0.1"
 });
 
 const client = new OpenApi.default(config);
@@ -63,9 +59,8 @@ function format_to_text(topics: any[]) {
     }).join("\n\n")
 }
 
-// Register Alibaba Cloud tool
 server.tool(
-    "fetch-hot-news",
+    "fetch_hot_news",
     "获取热点新闻列表、推荐新闻热点",
     {
         category: z.enum(["科技", "娱乐", "社会", "体育", "教育", "汽车", "旅游", "文化"]).optional().describe("新闻分类，可以为空"),
@@ -99,9 +94,7 @@ server.tool(
 async function main() {
     //change to sse
     const transport = new StdioServerTransport();
-
     await server.connect(transport);
-    console.error("Hot News MCP Server running on stdio");
 }
 
 
@@ -110,9 +103,9 @@ main().catch((error) => {
     process.exit(1);
 });
 
-
+//
 // async function test() {
-//     let result = await do_request_aliyun('时政', 1, 20, undefined, undefined)
+//     let result = await do_request_aliyun('时政', 1,undefined)
 //     console.log(result)
 // }
 //
