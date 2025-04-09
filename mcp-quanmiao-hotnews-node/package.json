@@ -17,6 +17,7 @@
     "@alicloud/openapi-client": "^0.4.7",
     "@alicloud/tea-util": "^1.4.7",
     "@modelcontextprotocol/sdk": "^1.9.0",
+    "dotenv": "^16.4.7",
     "zod": "^3.24.2"
   },
   "files": [

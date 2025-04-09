@@ -3,6 +3,9 @@ import * as OpenApi from '@alicloud/openapi-client';
 import * as $Util from '@alicloud/tea-util';
 import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
 import {z} from "zod";
+import dotenv from 'dotenv';
+dotenv.config(); // 加载 .env 文件
+
 
 // 阿里云配置
 const config = new OpenApi.Config({
@@ -41,8 +44,6 @@ async function do_request_aliyun(category: string | undefined,
     if (location) {
         params['Locations'] = [location];
     }
-
-    console.log(params)
 
     const runtime = new $Util.RuntimeOptions({
         readTimeout: 10000,
@@ -154,12 +155,13 @@ main().catch((error) => {
 });
 
 
-// async function main() {
-//     let result = await do_request_aliyun(undefined, undefined, undefined, undefined, '杭州')
+
+// async function test() {
+//     let result = await do_request_aliyun('时政', 1, 20, undefined, undefined)
 //     console.log(result)
 // }
 //
-// main().catch((error) => {
+// test().catch((error) => {
 //     console.error("Fatal error in main():", error);
 //     process.exit(1);
 // });
