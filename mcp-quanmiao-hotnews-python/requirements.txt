@@ -1,0 +1,5 @@
+python-dotenv>=1.0.0
+alibabacloud-tea-openapi>=0.3.7
+alibabacloud-tea-util>=0.3.11
+mcp-sdk>=1.9.0
+pydantic>=2.0.0 
