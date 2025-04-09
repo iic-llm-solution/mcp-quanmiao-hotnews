@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import {McpServer} from "@modelcontextprotocol/sdk/server/mcp.js";
 import * as OpenApi from '@alicloud/openapi-client';
 import * as $Util from '@alicloud/tea-util';
