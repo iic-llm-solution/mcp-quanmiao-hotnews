@@ -28,21 +28,14 @@ const server = new McpServer({
 const client = new OpenApi.default(config);
 
 async function do_request_aliyun(category: string | undefined,
-                                 pageNo: number | undefined,
-                                 pageSize: number | undefined,
-                                 location: string | undefined,
+                                 size: number | undefined,
                                  query: string | undefined) {
     const params = {
         WorkspaceId: process.env.WORKSPACE_ID,
         Category: category,
-        Current: pageNo,
-        Size: pageSize || 10,
+        Size: size || 10,
         Query: query,
         Locations: [] as string[],
-    }
-
-    if (location) {
-        params['Locations'] = [location];
     }
 
     const runtime = new $Util.RuntimeOptions({
@@ -72,23 +65,15 @@ function format_to_text(topics: any[]) {
 // Register Alibaba Cloud tool
 server.tool(
     "fetch-hot-news",
-    "获取热点新闻列表",
+    "获取热点新闻列表、推荐新闻热点",
     {
-        category: z.enum(["科技",
-            "娱乐",
-            "社会",
-            "体育",
-            "教育",
-            "汽车",
-            "旅游",
-            "文化"]).optional().describe("新闻分类"),
-        pageNo: z.number().int().min(1).max(100).optional().describe("页码"),
-        pageSize: z.number().int().min(1).max(100).default(10).optional().describe("每页数量"),
-        location: z.string().optional().describe("事件发生的地名（国家名或城市名或地区名）"),
+        category: z.enum(["科技", "娱乐", "社会", "体育", "教育", "汽车", "旅游", "文化"]).optional().describe("新闻分类，可以为空"),
+        size: z.number().int().min(1).max(100).default(10).optional().describe("新闻数量，可以为空"),
+        keyword: z.string().min(1).max(100).optional().describe("搜索的关键词，可以为空"),
     },
-    async ({category, pageNo, pageSize, location}) => {
+    async ({category, size, keyword}) => {
         try {
-            let result = await do_request_aliyun(category, pageNo, pageSize, location, undefined);
+            let result = await do_request_aliyun(category, size, keyword);
             return {
                 content: [{
                     type: "text",
@@ -109,36 +94,6 @@ server.tool(
     }
 );
 
-server.tool(
-    "search-hot-news-with-query",
-    "根据关键词搜索新闻",
-    {
-        size: z.number().int().min(1).max(100).default(10).optional().describe("每页数量"),
-        query: z.string().min(1).max(100).describe("搜索的关键词"),
-    },
-    async ({size, query}) => {
-        try {
-            let result = await do_request_aliyun(undefined, 1, size, undefined, query);
-            return {
-                content: [{
-                    type: "text",
-                    text: format_to_text(result)
-                }]
-            };
-        } catch (err) {
-            const error = err as Error;
-            console.error('Error calling Alibaba Cloud API:', error);
-            return {
-                content: [{
-                    type: "text",
-                    text: `Error: ${error.message}`
-                }],
-                isError: true
-            };
-        }
-    }
-)
-
 
 async function main() {
     //change to sse
@@ -153,7 +108,6 @@ main().catch((error) => {
     console.error("Fatal error in main():", error);
     process.exit(1);
 });
-
 
 
 // async function test() {
