@@ -1,0 +1,29 @@
+{
+  "name": "mcp-quanmiao-hotnews-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "bin": {
+    "mcp-quanmiao-hotnews-node": "./build/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc && chmod 755 build/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@alicloud/openapi-client": "^0.4.7",
+    "@alicloud/tea-util": "^1.4.7",
+    "@modelcontextprotocol/sdk": "^1.9.0",
+    "zod": "^3.24.2"
+  },
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "typescript": "^5.8.3"
+  }
+}
