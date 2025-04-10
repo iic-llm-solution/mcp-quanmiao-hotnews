@@ -5,6 +5,7 @@ import * as $Util from '@alicloud/tea-util';
 import {StdioServerTransport} from "@modelcontextprotocol/sdk/server/stdio.js";
 import {z} from "zod";
 import dotenv from 'dotenv';
+
 dotenv.config(); // 加载 .env 文件
 
 
@@ -19,7 +20,11 @@ const config = new OpenApi.Config({
 // Create server instance
 const server = new McpServer({
     name: "fetch_hot_news",
-    version: "0.0.1"
+    version: "0.0.1",
+    capabilities: {
+        resources: {},
+        tools: {},
+    }
 });
 
 const client = new OpenApi.default(config);
@@ -95,6 +100,7 @@ async function main() {
     //change to sse
     const transport = new StdioServerTransport();
     await server.connect(transport);
+    console.error("MCP Server running on stdio");
 }
 
 
