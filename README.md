@@ -40,7 +40,7 @@
 
 ![百炼业务空间管理页面](./images/workspace_manager.png)
 
-#### 使用子账号 AK SK
+#### 获取子账号 AK SK
 
 ##### 创建RAM用户获取AK、SK
 
