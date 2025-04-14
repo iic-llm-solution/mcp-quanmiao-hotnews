@@ -29,6 +29,11 @@
 
 链接：https://bailian.console.aliyun.com/
 
+#### 开通 百炼轻应用:车机网络热点信息互动问答
+目前限时免费：无需开通
+
+链接：https://bailian.console.aliyun.com/?tab=app#/app/app-market/quanmiao/news-broadcast
+
 #### 获取百炼业务空间ID（workspace_id）
 
 [百炼业务空间管理页面](https://bailian.console.aliyun.com/?tab=globalset#/efm/business_management?agentName=&pageNo=1&z_type_=%7B%22pageNo%22%3A%22num%22%7D)
