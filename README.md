@@ -77,7 +77,7 @@ QUANMIAO_MCP_TRANSPORT=sse
 #### stdio模式[推荐]
 
 ```shell
-uvx mcp-quanmiao-hotnews-node
+npx -y  @iic-llm-solution/mcp-quanmiao-hotnews-node
 ```
 
 ```json
