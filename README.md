@@ -22,24 +22,29 @@
 ### 前置要求
 
 #### 注册阿里云
+
 链接：https://www.aliyun.com/
 
 #### 开通阿里云百炼
+
 链接：https://bailian.console.aliyun.com/
 
 #### 获取百炼业务空间ID（workspace_id）
+
 [百炼业务空间管理页面](https://bailian.console.aliyun.com/?tab=globalset#/efm/business_management?agentName=&pageNo=1&z_type_=%7B%22pageNo%22%3A%22num%22%7D)
 
 ![百炼业务空间管理页面](./images/workspace_manager.png)
 
 #### 使用子账号 AK SK
+
 ##### 创建RAM用户获取AK、SK
+
 [使用RAM用户创建AKSK](https://ram.console.aliyun.com/users/create)
 ![使用RAM用户创建AKSK](./images/create_ram_user_for_bailian.png)
 ![创建完成RAM用户后获取AKSK](./images/after_create_ram_user.png)
 
-
 ##### 授权AK、SK访问 POP 接口
+
 [权限管理授予权限](https://ram.console.aliyun.com/users/detail?userId=<新创建的RAM账号ID>&activeTab=PermissionList)
 
 ![权限管理授予权限](./images/grant_pop_permission.png)
@@ -47,15 +52,16 @@
 ![授予全妙AliyunAiMiaoBiFullAccess](./images/grant_quanmiao_full_access.png)
 
 ##### 将RAM用户导入到百炼
+
 [百炼用户管理页面](https://bailian.console.aliyun.com/?tab=globalset#/user_management/user_management?keywords=&pageNo=1&z_type_=%7B%22pageNo%22%3A%22num%22%7D)
 
 ![百炼用户管理页面](./images/bailian_user_manager.png)
 ![新增百炼用户](./images/bailian_add_user.png)
 
-
-
 ### 开始运行
+
 #### 配置环境变量
+
 ```
 ALIBABA_CLOUD_ACCESS_KEY_ID=<阿里云AccessKeyID>
 ALIBABA_CLOUD_ACCESS_KEY_SECRET=<阿里云AccessKeySecret>
@@ -65,6 +71,7 @@ QUANMIAO_MCP_TRANSPORT=sse
 ```
 
 #### stdio模式[推荐]
+
 ```shell
 uvx mcp-quanmiao-hotnews-node
 ```
@@ -74,27 +81,27 @@ uvx mcp-quanmiao-hotnews-node
   "mcpServers": {
     "fetch_hot_news": {
       "isActive": true,
-      "command": "uvx",
+      "name": "fetch_hot_news",
+      "description": "获取热点新闻列表",
+      "command": "npx",
       "args": [
-        "mcp-quanmiao-hotnews-node"
+        "-y",
+        "@iic-llm-solution/mcp-quanmiao-hotnews-node"
       ],
       "env": {
         "ALIBABA_CLOUD_ACCESS_KEY_ID": "<阿里云AccessKeyID>",
         "ALIBABA_CLOUD_ACCESS_KEY_SECRET": "<阿里云AccessKeySecret>",
         "WORKSPACE_ID": "<百炼业务空间ID>"
-      },
-      "name": "fetch_hot_news",
-      "disabledTools": [
-        "fetch_hot_news"
-      ]
+      }
     }
   }
 }
 ```
 
 #### sse模式
+
 ```shell
-export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  uvx mcp-quanmiao-hotnews-node
+export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  npx -y  @iic-llm-solution/mcp-quanmiao-hotnews-node
 ```
 
 ```json
@@ -104,7 +111,6 @@ export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  uvx mcp-q
       "name": "fetch_hot_news",
       "type": "sse",
       "description": "获取热点新闻列表",
-      "isActive": false,
       "baseUrl": "http://127.0.0.1:8080"
     }
   }
@@ -112,5 +118,6 @@ export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  uvx mcp-q
 ```
 
 ### 许可证
+
 本项目采用 MIT 许可证
 详细信息请查看 [LICENSE](./LICENSE) 文件。
