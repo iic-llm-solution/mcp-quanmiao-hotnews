@@ -17,7 +17,7 @@ export default function create_sse_app() {
             await transport.handlePostMessage(req, res);
         });
 
-        const PORT = process.env.PORT || 8080;
+        const PORT = process.env.QUANMIAO_MCP_PORT || 8080;
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`);
         });
