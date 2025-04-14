@@ -18,12 +18,14 @@
     "@alicloud/tea-util": "^1.4.7",
     "@modelcontextprotocol/sdk": "^1.9.0",
     "dotenv": "^16.4.7",
+    "express": "^5.1.0",
     "zod": "^3.24.2"
   },
   "files": [
     "build"
   ],
   "devDependencies": {
+    "@types/express": "^5.0.1",
     "@types/node": "^22.14.0",
     "typescript": "^5.8.3"
   }
