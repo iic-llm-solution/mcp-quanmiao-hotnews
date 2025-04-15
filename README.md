@@ -122,6 +122,5 @@ export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  npx -y  @
 ```
 
 ### 许可证
-
-本项目采用 MIT 许可证
+本项目采用 Apache License 2.0 许可证
 详细信息请查看 [LICENSE](./LICENSE) 文件。
