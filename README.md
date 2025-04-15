@@ -2,7 +2,11 @@
 
 ### 项目简介
 
-全妙新闻播报MCP Server 是一个基于阿里云百炼API的新闻聚合服务，专注于实时获取和处理热点新闻资讯。
+全妙新闻播报MCP Server 是一个基于阿里云百炼API的新闻聚合服务，专注于实时获取热点新闻资讯。
+
+#### 提供以下工具列表
+
+![img.png](images/list_tools.png)
 
 ### 项目结构
 
@@ -29,6 +33,7 @@
 链接：https://bailian.console.aliyun.com/
 
 #### 开通 百炼轻应用:车机网络热点信息互动问答
+
 目前限时免费：无需开通
 
 链接：https://bailian.console.aliyun.com/?tab=app#/app/app-market/quanmiao/news-broadcast
@@ -121,6 +126,18 @@ export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  npx -y  @
 }
 ```
 
+### 使用案例
+
+#### 在cherry studio中使用
+
+**配置**
+![配置MCP SERVER](images/cherry_studio_example.png)
+**开启对话使用**
+![启用 MCP SERVER](images/cherry_studio_use.png)
+**对话**
+![开启对话](images/cherry_studio_dialogue.png)
+
 ### 许可证
+
 本项目采用 Apache License 2.0 许可证
 详细信息请查看 [LICENSE](./LICENSE) 文件。
