@@ -130,11 +130,16 @@ export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  npx -y  @
 
 #### 在cherry studio中使用
 
-**配置**
+##### **配置MCP**
+
 ![配置MCP SERVER](images/cherry_studio_example.png)
-**开启对话使用**
+
+##### **在对话中启用MCP**
+
 ![启用 MCP SERVER](images/cherry_studio_use.png)
-**对话**
+
+##### **对话使用**
+
 ![开启对话](images/cherry_studio_dialogue.png)
 
 ### 许可证
