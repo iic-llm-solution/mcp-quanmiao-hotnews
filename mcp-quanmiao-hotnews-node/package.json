@@ -1,6 +1,6 @@
 {
-  "name": "mcp-quanmiao-hotnews-node",
-  "version": "0.0.1",
+  "name": "@iic-llm-solution/mcp-quanmiao-hotnews-node",
+  "version": "0.0.4",
   "main": "index.js",
   "bin": {
     "mcp-quanmiao-hotnews-node": "./build/index.js"
@@ -24,6 +24,9 @@
   "files": [
     "build"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/node": "^22.14.0",

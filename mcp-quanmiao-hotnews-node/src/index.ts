@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // Copyright 2025 全妙新闻播报
 
 // Licensed under the Apache License, Version 2.0 (the "License");
