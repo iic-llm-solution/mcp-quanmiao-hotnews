@@ -6,7 +6,7 @@
 
 #### 提供以下工具列表
 
-![img.png](images/list_tools.png)
+![img.png](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/list_tools.png)
 
 ### 项目结构
 
@@ -42,30 +42,30 @@
 
 [百炼业务空间管理页面](https://bailian.console.aliyun.com/?tab=globalset#/efm/business_management?agentName=&pageNo=1&z_type_=%7B%22pageNo%22%3A%22num%22%7D)
 
-![百炼业务空间管理页面](./images/workspace_manager.png)
+![百炼业务空间管理页面](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/workspace_manager.png)
 
 #### 获取子账号 AK SK
 
 ##### 创建RAM用户获取AK、SK
 
 [使用RAM用户创建AKSK](https://ram.console.aliyun.com/users/create)
-![使用RAM用户创建AKSK](./images/create_ram_user_for_bailian.png)
-![创建完成RAM用户后获取AKSK](./images/after_create_ram_user.png)
+![使用RAM用户创建AKSK](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/create_ram_user_for_bailian.png)
+![创建完成RAM用户后获取AKSK](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/after_create_ram_user.png)
 
 ##### 授权AK、SK访问 POP 接口
 
 [权限管理授予权限](https://ram.console.aliyun.com/users/detail?userId=<新创建的RAM账号ID>&activeTab=PermissionList)
 
-![权限管理授予权限](./images/grant_pop_permission.png)
+![权限管理授予权限](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/grant_pop_permission.png)
 
-![授予全妙AliyunAiMiaoBiFullAccess](./images/grant_quanmiao_full_access.png)
+![授予全妙AliyunAiMiaoBiFullAccess](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/grant_quanmiao_full_access.png)
 
 ##### 将RAM用户导入到百炼
 
 [百炼用户管理页面](https://bailian.console.aliyun.com/?tab=globalset#/user_management/user_management?keywords=&pageNo=1&z_type_=%7B%22pageNo%22%3A%22num%22%7D)
 
-![百炼用户管理页面](./images/bailian_user_manager.png)
-![新增百炼用户](./images/bailian_add_user.png)
+![百炼用户管理页面](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/bailian_user_manager.png)
+![新增百炼用户](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/bailian_add_user.png)
 
 ### 开始运行
 
@@ -132,15 +132,15 @@ export QUANMIAO_MCP_TRANSPORT=sse && export QUANMIAO_MCP_PORT=8080 &&  npx -y  @
 
 ##### **配置MCP**
 
-![配置MCP SERVER](images/cherry_studio_example.png)
+![配置MCP SERVER](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/cherry_studio_example.png)
 
 ##### **在对话中启用MCP**
 
-![启用 MCP SERVER](images/cherry_studio_use.png)
+![启用 MCP SERVER](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/cherry_studio_use.png)
 
 ##### **对话使用**
 
-![开启对话](images/cherry_studio_dialogue.png)
+![开启对话](https://github.com/iic-llm-solution/mcp-quanmiao-hotnews/blob/master/images/cherry_studio_dialogue.png)
 
 ### 许可证
 
