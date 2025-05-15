@@ -13,6 +13,7 @@ const config = new OpenApi.Config({
     signatureVersion: "V3",
     accessKeyId: process.env.ALIBABA_CLOUD_ACCESS_KEY_ID,
     accessKeySecret: process.env.ALIBABA_CLOUD_ACCESS_KEY_SECRET,
+    securityToken: process.env.ALIBABA_CLOUD_SECURITY_TOKEN,
     endpoint: 'aimiaobi.cn-beijing.aliyuncs.com'
 });
 
