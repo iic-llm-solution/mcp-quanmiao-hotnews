@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/iic-llm-solution-mcp-quanmiao-hotnews-badge.png)](https://mseep.ai/app/iic-llm-solution-mcp-quanmiao-hotnews)
+
 ## 全妙新闻播报MCP Server
 
 ### 项目简介
